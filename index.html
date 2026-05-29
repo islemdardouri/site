@@ -205,46 +205,31 @@
           </div>
 
           <div class="studio-layout">
-            <div class="viewer-wrap">
-              <canvas id="model-canvas"></canvas>
-              <div class="viewer-badge" id="loadingText">Scène 3D prête ✓</div>
+            <div class="viewer-wrap" style="position: relative; overflow: hidden; border-radius: 12px;">
+              <!-- Intégration du fichier HTML 3D via iframe -->
+              <iframe 
+                src="filova_hearts_3d.html" 
+                style="width: 100%; height: 100%; min-height: 460px; border: none;" 
+                title="Modèle 3D Filova Hearts">
+              </iframe>
             </div>
 
             <div class="control-panel">
-              <h4>Contrôles</h4>
-
+              <h4>Info Studio</h4>
+              <p>Le modèle 3D <strong>filova_hearts_3d.html</strong> est maintenant intégré directement dans la page !</p>
+              
+              <div class="tip-box" style="margin-top: 2rem;">
+                <strong>Note :</strong>
+                Assurez-vous que le fichier <code>filova_hearts_3d.html</code> se trouve bien dans le même dossier que ce site pour qu'il s'affiche correctement.
+              </div>
+              
+              <!-- Anciens contrôles commentés car incompatibles avec un iframe externe -->
+              <!--
               <div class="ctrl-group">
                 <label>Charger un .glb</label>
                 <input type="file" id="glbInput" accept=".glb,.gltf" />
-                <p class="hint">Blender → Fichier → Exporter → glTF 2.0</p>
               </div>
-
-              <div class="ctrl-group">
-                <label>Rotation auto</label>
-                <button id="btnRotation" class="ctrl-btn active">⏸ Arrêter</button>
-              </div>
-
-              <div class="ctrl-group">
-                <label>Réinitialiser</label>
-                <button id="btnReset" class="ctrl-btn">↺ Caméra</button>
-              </div>
-
-              <div class="ctrl-group">
-                <label>Couleur d'accent</label>
-                <div class="color-row">
-                  <button class="cdot selected" style="background:#7F77DD" data-c="#7F77DD"></button>
-                  <button class="cdot" style="background:#D4537E" data-c="#D4537E"></button>
-                  <button class="cdot" style="background:#C9A84C" data-c="#C9A84C"></button>
-                  <button class="cdot" style="background:#5DCAA5" data-c="#5DCAA5"></button>
-                </div>
-              </div>
-
-              <div class="tip-box">
-                <strong>Navigation souris</strong>
-                Clic gauche → orbiter<br />
-                Clic droit → déplacer<br />
-                Molette → zoomer
-              </div>
+              -->
             </div>
           </div>
         </section>
